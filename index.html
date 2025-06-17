@@ -1,0 +1,597 @@
+<!--
+    Main HTML document for the One Flag website.
+    Uses Bootstrap 5, Google Fonts, Font Awesome, and custom CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Layout</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Responsive fix for animated word span */
+        #altWord2 {
+            display: inline-block;
+            min-width: 9ch;
+        }
+
+        /* Responsive logo */
+        .navbar-brand img {
+            max-height: 60px;
+            height: auto;
+            width: auto;
+        }
+
+        /* Responsive padding for hero */
+        @media (max-width: 767.98px) {
+            .hero-section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .hero-text {
+                text-align: center;
+                align-items: center !important;
+            }
+        }
+
+        /* Responsive About Us logo */
+        @media (max-width: 767.98px) {
+            .about-us-section img {
+                max-height: 120px !important;
+            }
+        }
+
+        /* Responsive feature cards */
+        @media (max-width: 991.98px) {
+            .my-box {
+                min-height: 260px !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .my-box {
+                min-height: 200px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =======================
+         Navbar
+    ======================== -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm">
+        <div class="container">
+            <!-- Logo aligned left, smaller -->
+            <a class="navbar-brand me-auto" href="index.html">
+                <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo">
+            </a>
+            <!-- Burger menu for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation links (collapsible on mobile) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-dark ms-lg-3 mt-2 mt-lg-0" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =======================
+         Hero Section
+    ======================== -->
+    <section class="hero-section py-5">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 hero-text mx-auto text-center">
+                    <!-- Animated phrase -->
+                    <div class="mb-4">
+                        <div class="phrase">
+                            <h1>
+                                <span class="static">One&nbsp;</span>
+                                <span class="dynamic" id="altWord1">flag</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- Hero description -->
+                    <div class="mb-4">
+                        <p class="lead hero-paragraph">
+                            At One Flag, we are redefining how education, leadership, health, and
+                            communication shape the future. We believe in experiential learning — a hands-on,
+                            immersive approach that goes beyond traditional classrooms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Why Us Section
+    ======================== -->
+    <section class="why-us-section w-100 py-5 bg-white">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="mb-4">
+                        <h2 class="text-center fw-bold">Why Choose One Flag?</h2>
+                    </div>
+                    <div class="mb-4">
+                        <!-- List of reasons with icons -->
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Impact-Driven Learning</strong> – Real-world experiences that drive change.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Global Network</strong> – Connecting professionals, businesses, and governments
+                                across borders.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Leadership Development</strong> – Cultivating the leaders of tomorrow through
+                                immersive training.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Sustainable Solutions</strong> – Addressing educational and societal challenges
+                                with long-term impact.
+                            </li>
+                        </ul>
+                        <!-- Call to action button -->
+                        <div class="text-center">
+                            <a href="#" class="btn btn-lg btn-outline-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Statistics Section
+    ======================== -->
+    <section class="statistics-section py-5 bg-light">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <h2 class="fw-bold mb-4">The Impact of Diversity</h2>
+                    <p class="lead mb-5">
+                        Diversity is not just a metric; it's a catalyst for innovation and growth. At One Flag, we
+                        harness the power of diverse perspectives to drive success in every initiative.
+                    </p>
+                </div>
+                <!-- Four statistic cards in a row -->
+                <div class="container bg-light w-100">
+                    <div class="row g-4 justify-content-center align-items-stretch">
+                        <!-- Statistic 1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="39" data-prefix="+ " data-suffix=" %">0
+                                </h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Companies with ethnically diverse leadership are 39% more likely to outperform
+                                    competitors.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="1.8" data-decimal="true" data-suffix=" x">0
+                                </h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Multicultural teams are 1.8 times more likely to be innovative and adaptable.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 3 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="30" data-prefix="+ " data-suffix=" %">0
+                                </h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Culturally adaptive companies see 30% higher revenue growth than those that
+                                    aren’t.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 4 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="73" data-prefix="+ " data-suffix=" %">0
+                                </h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    of executives cite cultural understanding as a top factor in the success of
+                                    international business ventures.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         About Us Section
+    ======================== -->
+    <section class="about-us-section py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-center">
+                <!-- Section title -->
+                <h2 class="fs-1 fw-bold mb-5 text-center border-bottom border-1 border-grey pb-3">About Us</h2>
+                <!-- Logo image (top on mobile, left on desktop) -->
+                <div class="col-12 mb-5 text-center">
+                    <img src="assets/media/one-flag-nav-logo.webp" alt="About One Flag" class="img-fluid rounded shadow"
+                        style="max-height:200px; width:auto; height:auto;">
+                </div>
+                <!-- Vision, Mission, Values -->
+                <div class="col-12 col-md-10 col-lg-7 align-items-center justify-content-center text-center mx-auto">
+                    <!-- Vision -->
+                    <div class="mb-5">
+                        <h4 class="fw-semibold mb-2">
+                            <i class="fa-regular fa-eye text-primary me-2"></i>Our Vision
+                        </h4>
+                        <p class="mb-3">
+                            To create a world where knowledge, opportunity, and growth are accessible to all, fostering
+                            globally conscious leaders who drive positive change.
+                        </p>
+                    </div>
+                    <!-- Mission -->
+                    <div class="mb-5">
+                        <h4 class="fw-semibold mb-2">
+                            <i class="fa-solid fa-flag text-warning me-2"></i>Our Mission
+                        </h4>
+                        <p class="mb-3">
+                            To transform lives and communities by bridging knowledge gaps through hands-on learning in
+                            communication, leadership, health, and education.
+                        </p>
+                    </div>
+                    <!-- Values -->
+                    <div>
+                        <h4 class="fw-semibold mb-2">
+                            <i class="fa-regular fa-gem text-info me-2"></i>Our Values
+                        </h4>
+                        <div class="ps-2 ps-md-4 ms-2 ms-md-5">
+                            <ul class="list-group list-group-flush mb-4 text-start">
+                                <li class="list-group-item">
+                                    <span class="fs-4 me-2">💡</span>
+                                    <strong>Empowerment</strong> – Unlocking potential through transformative
+                                    experiences.
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="fs-4 me-2">🌍</span>
+                                    <strong>Inclusivity</strong> – Building bridges across cultures and industries.
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="fs-4 me-2">🚀</span>
+                                    <strong>Innovation</strong> – Redefining learning through immersive, practical
+                                    engagement.
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="fs-4 me-2">🔗</span>
+                                    <strong>Collaboration</strong> – Strengthening global partnerships for sustainable
+                                    impact.
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="fs-4 me-2">🛠</span>
+                                    <strong>Integrity</strong> – Ensuring ethical, transparent, and meaningful progress.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Dynamic Word Section
+    ======================== -->
+    <section class="pt-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="text-center pt-4">
+                        <!-- Animated word (Live, Explore, Transform) -->
+                        <h2 class="display-4 fw-bold mb-3">
+                            <span id="altWord2" class="fw-bold"></span>
+                        </h2>
+                        <p class="lead text-secondary">
+                            Discover how you can <span class="fw-bold" id="altWord2-helper"></span> your potential with
+                            One Flag.
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature cards below the animated word -->
+                <div class="container my-5">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Card 1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
+                                style="background-color: #1C35CE; min-height: 320px;">
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-chess-king fa-2x"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Inspire Leadership</h3>
+                                <p class="text mb-3">
+                                    Empowering individuals to lead with vision, empathy, and impact in a globalized
+                                    world.
+                                </p>
+                                <div class="w-100 mt-auto">
+                                    <img src="assets/media/leadership.jpg" alt="leadership" class="img-fluid rounded"
+                                        style="object-fit:cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
+                                style="background-color: #A8599E; min-height: 320px;">
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-globe fa-2x"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Global Education Connection</h3>
+                                <p class="text mb-3">
+                                    Bridging cultures and knowledge through international educational opportunities.
+                                </p>
+                                <div class="w-100 mt-auto">
+                                    <img src="assets/media/education.jpg" alt="education" class="img-fluid rounded"
+                                        style="object-fit:cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
+                                style="background-color: #FCC100; min-height: 320px;">
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">World Medical Alliance</h3>
+                                <p class="text mb-3">
+                                    Advancing health and wellness through global medical collaboration and training.
+                                </p>
+                                <div class="w-100 mt-5">
+                                    <img src="assets/media/medical.jpg" alt="medical" class="img-fluid rounded"
+                                        style="object-fit:cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
+                                style="background-color: #333333; min-height: 320px;">
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-language fa-2x"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Business English Immersion Trip</h3>
+                                <p class="text mb-3">
+                                    Master business English and cross-cultural skills through immersive real-world
+                                    experiences.
+                                </p>
+                                <div class="w-100 mt-auto">
+                                    <img src="assets/media/english.jpg" alt="english" class="img-fluid rounded"
+                                        style="object-fit:cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Contact Us Section
+    ======================== -->
+    <section class="contact-us-section py-5 bg-white">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <div class="bg-white rounded-4 shadow p-4 p-md-5 text-center">
+                        <!-- Section title -->
+                        <h2 class="fw-bold mb-3 border-bottom border-1 border-grey p-2">Contact Us</h2>
+                        <h5 class="m-4">Let’s Shape the Future Together</h5>
+                        <p class="mb-4 p-4">
+                            We collaborate with businesses, governments, and institutions to create customized,
+                            high-impact programs. Let’s discuss how we can work together to build solutions that drive
+                            real change.
+                        </p>
+                        <!-- Contact details list -->
+                        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 400px;">
+                            <li class="mb-2">
+                                <span class="fs-5 me-2">📞</span>
+                                <strong>Phone:</strong> <a href="tel:+353896065175"
+                                    class="text-decoration-none text-dark">+353 89 606 5175</a>
+                            </li>
+                            <li class="mb-2">
+                                <span class="fs-5 me-2">📧</span>
+                                <strong>Email:</strong> <a href="mailto:your@email.com"
+                                    class="text-decoration-none text-dark">contact@oneflag.com</a>
+                            </li>
+                            <li class="mb-2">
+                                <span class="fs-5 me-2">💬</span>
+                                <strong>Schedule a Consultation:</strong>
+                                <a href="https://your-booking-link.com" class="text-decoration-none text-primary"
+                                    target="_blank">Book Now &rarr;</a>
+                            </li>
+                            <li class="mb-2">
+                                <span class="fs-5 me-2">🔗</span>
+                                <span class="fw-semibold">Take the First Step. Let’s Connect.</span>
+                            </li>
+                        </ul>
+                        <!-- Call to action button -->
+                        <div class="mb-3">
+                            <a href="mailto:your@email.com" class="btn btn-primary btn-lg mt-2">Send a Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Footer
+    ======================== -->
+    <footer class="bg-dark text-light pt-4 pb-3 mt-auto">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Brand / Logo -->
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="#" class="text-decoration-none text-light">
+                        <h5>One Flag</h5>
+                    </a>
+                    <p class="small">United by purpose.</p>
+                </div>
+                <!-- Navigation Links -->
+                <div class="col-12 col-md-4 mb-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Legal / Social -->
+                <div class="col-12 col-md-4 mb-3">
+                    <h6>Connect</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-light">
+            <div class="text-center small">&copy; 2025 One Flag. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- =======================
+         Bootstrap JS Bundle
+    ======================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =======================
+         Word Rotation Script
+    ======================== -->
+    <script>
+        // Word lists for animated text
+        const wordList1 = [" flag", " purpose"];
+        const wordList2 = ["Live", "Explore", "Transform"];
+        const colorList2 = ["#A8599E", "#FCC100", "#1C35CE"];
+
+        // Get elements for animation
+        const el1 = document.getElementById("altWord1");
+        const el2 = document.getElementById("altWord2");
+
+        // Typing effect function for animated words
+        function typeEffect(element, words, index, delay = 150, colorList = null) {
+            let word = words[index];
+            let charIndex = 0;
+            let isDeleting = false;
+
+            // Set color if colorList is provided
+            if (colorList) {
+                element.style.color = colorList[index % colorList.length];
+            }
+
+            function type() {
+                const currentText = word.substring(0, charIndex);
+                element.textContent = currentText;
+
+                if (!isDeleting && charIndex < word.length) {
+                    charIndex++;
+                    setTimeout(type, delay);
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    setTimeout(type, delay / 2);
+                } else {
+                    if (!isDeleting) {
+                        isDeleting = true;
+                        setTimeout(type, 1000);
+                    } else {
+                        isDeleting = false;
+                        index = (index + 1) % words.length;
+                        word = words[index];
+                        charIndex = 0;
+                        // Set color for the new word
+                        if (colorList) {
+                            element.style.color = colorList[index % colorList.length];
+                        }
+                        setTimeout(() => typeEffect(element, words, index, delay, colorList), 500);
+                    }
+                }
+            }
+
+            type();
+        }
+
+        // Animate counters and start typing effects on DOM ready
+        document.addEventListener("DOMContentLoaded", function () {
+            // Animate number counters in statistics section
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const prefix = counter.getAttribute('data-prefix') || '';
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const isDecimal = counter.getAttribute('data-decimal') === "true";
+                    let text = counter.innerText;
+                    if (prefix) text = text.replace(prefix, '');
+                    if (suffix) text = text.replace(suffix, '');
+                    let count = isDecimal ? parseFloat(text) : parseInt(text, 10);
+                    if (isNaN(count)) count = 0;
+                    const increment = isDecimal ? (target / 100) : Math.ceil(target / 100);
+
+                    if (count < target) {
+                        const next = isDecimal
+                            ? (count + increment > target ? target : (count + increment)).toFixed(1)
+                            : Math.min(count + increment, target);
+                        counter.innerText = `${prefix}${next}${suffix}`;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = `${prefix}${isDecimal ? target.toFixed(1) : target}${suffix}`;
+                    }
+                };
+                updateCount();
+            });
+
+            // Start typing effects for animated words
+            typeEffect(el1, wordList1, 0);
+            typeEffect(el2, wordList2, 0, 150, colorList2);
+        });
+    </script>
+</body>
+
+</html>
