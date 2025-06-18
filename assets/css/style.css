@@ -47,18 +47,14 @@
  }
 
  .hero-section {
-     background-image: url('../media/hero-image.png');
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
      padding: 60px 0;
      background-color: white;
      width: 100%;
-     height: 35rem;
+     height: 45xrem;
  }
 
- .phrase {
-     font-size: 10rem;
+ .phrase h1 {
+     font-size: 5rem;
      margin-bottom: 20px;
      font-family: 'Playfair Display', serif;
  }
@@ -77,13 +73,14 @@
      display: inline-block;
  }
 
-.stat-box-text {
-    min-height: 120px; /* Adjust as needed for your content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+ .stat-box-text {
+     min-height: 120px;
+     /* Adjust as needed for your content */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
 
  .dynamic::after {
      content: "|";
@@ -92,10 +89,72 @@
  }
 
  #altWord2 {
-    display: inline-block;
-    min-width: 8ch; /* 8 characters, adjust as needed */
+     display: inline-block;
+     min-width: 8ch;
+     /* 8 characters, adjust as needed */
+ }
+
+ /* Responsive fix for animated word span */
+ #altWord2 {
+     display: inline-block;
+     min-width: 9ch;
+ }
+
+ /* Responsive logo */
+ .navbar-brand img {
+     max-height: 60px;
+     height: auto;
+     width: auto;
+ }
+
+ .mobile-break {
+    display: none;
 }
 
+.card-img-fixed {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+}
+
+ /* Responsive padding for hero */
+ @media (max-width: 767.98px) {
+     .hero-section {
+         padding-top: 2rem !important;
+         padding-bottom: 2rem !important;
+     }
+
+     .hero-text {
+         text-align: center;
+         align-items: center !important;
+     }
+
+     .mobile-break {
+        display: block;
+        width: 100%;
+        height: 0;
+    }
+ }
+
+ /* Responsive About Us logo */
+ @media (max-width: 767.98px) {
+     .about-us-section img {
+         max-height: 120px !important;
+     }
+ }
+
+ /* Responsive feature cards */
+ @media (max-width: 991.98px) {
+     .my-box {
+         min-height: 260px !important;
+     }
+ }
+
+ @media (max-width: 767.98px) {
+     .my-box {
+         min-height: 200px !important;
+     }
+ }
 
  @keyframes blink {
      50% {

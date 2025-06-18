@@ -21,54 +21,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Responsive fix for animated word span */
-        #altWord2 {
-            display: inline-block;
-            min-width: 9ch;
-        }
-
-        /* Responsive logo */
-        .navbar-brand img {
-            max-height: 60px;
-            height: auto;
-            width: auto;
-        }
-
-        /* Responsive padding for hero */
-        @media (max-width: 767.98px) {
-            .hero-section {
-                padding-top: 2rem !important;
-                padding-bottom: 2rem !important;
-            }
-
-            .hero-text {
-                text-align: center;
-                align-items: center !important;
-            }
-        }
-
-        /* Responsive About Us logo */
-        @media (max-width: 767.98px) {
-            .about-us-section img {
-                max-height: 120px !important;
-            }
-        }
-
-        /* Responsive feature cards */
-        @media (max-width: 991.98px) {
-            .my-box {
-                min-height: 260px !important;
-            }
-        }
-
-        @media (max-width: 767.98px) {
-            .my-box {
-                min-height: 200px !important;
-            }
-        }
-    </style>
 </head>
+
+<button id="backToTop" class="btn btn-outline-dark rounded shadow" style="position:fixed; bottom:32px; right:32px; display:none; z-index:2000; width:48px; height:48px;">
+    <i class="fa fa-arrow-up"></i>
+</button>
+
+
+<script>
+    // Show/hide back to top button on scroll
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+    // Smooth scroll to top
+    backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 
 <body>
 
@@ -76,10 +50,11 @@
          Navbar
     ======================== -->
     <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Logo aligned left, smaller -->
             <a class="navbar-brand me-auto" href="index.html">
-                <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo">
+                <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo" class="img-fluid"
+                    style="max-height: 120px; width: auto; height: auto;">
             </a>
             <!-- Burger menu for mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -90,13 +65,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#">Home</a>
+                        <a class="nav-link fw-semibold" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#">About</a>
+                        <a class="nav-link fw-semibold" href="#about-section">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-dark ms-lg-3 mt-2 mt-lg-0" href="#">Contact</a>
+                        <a class="btn btn-outline-dark ms-lg-3 mt-2 mt-lg-0" href="#contact-section">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -106,27 +81,28 @@
     <!-- =======================
          Hero Section
     ======================== -->
-    <section class="hero-section py-5">
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8 hero-text mx-auto text-center">
-                    <!-- Animated phrase -->
-                    <div class="mb-4">
-                        <div class="phrase">
-                            <h1>
-                                <span class="static">One&nbsp;</span>
-                                <span class="dynamic" id="altWord1">flag</span>
-                            </h1>
-                        </div>
+    <section class="hero-section p-0 m-0">
+        <div class="container my-2">
+            <div class="row align-items-center justify-content-center">
+                <!-- Left: Dynamic text and paragraph -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="phrase mb-4 text-center text-md-start">
+                        <h1>
+                            <span class="static">One&nbsp;</span>
+                            <span class="mobile-break"></span>
+                            <span class="dynamic" id="altWord1">flag</span>
+                        </h1>
                     </div>
-                    <!-- Hero description -->
-                    <div class="mb-4">
-                        <p class="lead hero-paragraph">
-                            At One Flag, we are redefining how education, leadership, health, and
-                            communication shape the future. We believe in experiential learning — a hands-on,
-                            immersive approach that goes beyond traditional classrooms.
-                        </p>
-                    </div>
+                    <p class="lead hero-paragraph text-center text-md-start pe-4">
+                        At One Flag, we are redefining how education, leadership, health, and
+                        communication shape the future. We believe in experiential learning — a hands-on,
+                        immersive approach that goes beyond traditional classrooms.
+                    </p>
+                </div>
+                <!-- Right: GIF image -->
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img src="assets/media/hero.gif" alt="Hero GIF" class="img-fluid"
+                        style="max-width: 100%; height: auto; max-height: 500px;">
                 </div>
             </div>
         </div>
@@ -167,7 +143,7 @@
                         </ul>
                         <!-- Call to action button -->
                         <div class="text-center">
-                            <a href="#" class="btn btn-lg btn-outline-dark">Learn More</a>
+                            <a href="#contact-section" class="btn btn-lg btn-outline-dark">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -178,7 +154,7 @@
     <!-- =======================
          Statistics Section
     ======================== -->
-    <section class="statistics-section py-5 bg-light">
+    <section class="statistics-section py-5 bg-light" id="statistics-section">
         <div class="container py-4">
             <div class="row justify-content-center text-center">
                 <div class="col-12 col-md-10 col-lg-8">
@@ -244,70 +220,59 @@
     <!-- =======================
          About Us Section
     ======================== -->
-    <section class="about-us-section py-5 bg-white">
-        <div class="container py-4">
-            <div class="row align-items-center justify-content-center">
-                <!-- Section title -->
-                <h2 class="fs-1 fw-bold mb-5 text-center border-bottom border-1 border-grey pb-3">About Us</h2>
-                <!-- Logo image (top on mobile, left on desktop) -->
-                <div class="col-12 mb-5 text-center">
-                    <img src="assets/media/one-flag-nav-logo.webp" alt="About One Flag" class="img-fluid rounded shadow"
-                        style="max-height:200px; width:auto; height:auto;">
-                </div>
-                <!-- Vision, Mission, Values -->
-                <div class="col-12 col-md-10 col-lg-7 align-items-center justify-content-center text-center mx-auto">
-                    <!-- Vision -->
-                    <div class="mb-5">
-                        <h4 class="fw-semibold mb-2">
-                            <i class="fa-regular fa-eye text-primary me-2"></i>Our Vision
-                        </h4>
-                        <p class="mb-3">
-                            To create a world where knowledge, opportunity, and growth are accessible to all, fostering
-                            globally conscious leaders who drive positive change.
-                        </p>
-                    </div>
-                    <!-- Mission -->
-                    <div class="mb-5">
-                        <h4 class="fw-semibold mb-2">
-                            <i class="fa-solid fa-flag text-warning me-2"></i>Our Mission
-                        </h4>
-                        <p class="mb-3">
-                            To transform lives and communities by bridging knowledge gaps through hands-on learning in
-                            communication, leadership, health, and education.
-                        </p>
-                    </div>
-                    <!-- Values -->
-                    <div>
-                        <h4 class="fw-semibold mb-2">
-                            <i class="fa-regular fa-gem text-info me-2"></i>Our Values
-                        </h4>
-                        <div class="ps-2 ps-md-4 ms-2 ms-md-5">
-                            <ul class="list-group list-group-flush mb-4 text-start">
-                                <li class="list-group-item">
-                                    <span class="fs-4 me-2">💡</span>
-                                    <strong>Empowerment</strong> – Unlocking potential through transformative
-                                    experiences.
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="fs-4 me-2">🌍</span>
-                                    <strong>Inclusivity</strong> – Building bridges across cultures and industries.
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="fs-4 me-2">🚀</span>
-                                    <strong>Innovation</strong> – Redefining learning through immersive, practical
-                                    engagement.
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="fs-4 me-2">🔗</span>
-                                    <strong>Collaboration</strong> – Strengthening global partnerships for sustainable
-                                    impact.
-                                </li>
-                                <li class="list-group-item">
-                                    <span class="fs-4 me-2">🛠</span>
-                                    <strong>Integrity</strong> – Ensuring ethical, transparent, and meaningful progress.
-                                </li>
-                            </ul>
+    <h3 class="text-center m-4 fs-1" id="about-section">About us</h3>
+    <section class="about-us-section py-5 bg-white" >
+        <hr class="w-25 mx-auto mb-4 border-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 position-relative">
+                        <!-- Floating Logo -->
+                        <div class="position-absolute top-0 start-50 translate-middle-x"
+                            style="z-index:1050; margin-top: -60px;">
+                            <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo"
+                                class="img-fluid shadow rounded" style="width:150px; background:white;">
                         </div>
+                        <!-- Content -->
+                        <div class="row mt-5 pt-4">
+                            <!-- Vision -->
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-regular fa-eye"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Vision</h4>
+                                    <p class="mb-0 small">
+                                        To create a world where knowledge, opportunity, and growth are accessible to
+                                        all, fostering globally conscious leaders who drive positive change.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Mission -->
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-solid fa-flag"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Mission</h4>
+                                    <p class="mb-0 small">
+                                        To transform lives and communities by bridging knowledge gaps through hands-on
+                                        learning in communication, leadership, health, and education.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Values -->
+                            <div class="col-12 col-md-4">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-regular fa-gem"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Values</h4>
+                                    <ul class="list-unstyled mb-0 small">
+                                        <li class="mb-2"><span class="me-1">💡</span>Empowerment</li>
+                                        <li class="mb-2"><span class="me-1">🌍</span>Inclusivity</li>
+                                        <li class="mb-2"><span class="me-1">🚀</span>Innovation</li>
+                                        <li class="mb-2"><span class="me-1">🔗</span>Collaboration</li>
+                                        <li><span class="me-1">🛠</span>Integrity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content -->
                     </div>
                 </div>
             </div>
@@ -327,8 +292,7 @@
                             <span id="altWord2" class="fw-bold"></span>
                         </h2>
                         <p class="lead text-secondary">
-                            Discover how you can <span class="fw-bold" id="altWord2-helper"></span> your potential with
-                            One Flag.
+                            Discover how you can unlock your potential with One Flag.
                         </p>
                     </div>
                 </div>
@@ -336,163 +300,181 @@
                 <div class="container my-5">
                     <div class="row g-4 justify-content-center">
                         <!-- Card 1 -->
-                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
-                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
-                                style="background-color: #1C35CE; min-height: 320px;">
-                                <div class="mb-3">
-                                    <i class="fa-solid fa-chess-king fa-2x"></i>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #8CA6FF; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/leadership.jpg" alt="leadership"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
                                 </div>
-                                <h3 class="h5 fw-bold mb-3">Inspire Leadership</h3>
-                                <p class="text mb-3">
-                                    Empowering individuals to lead with vision, empathy, and impact in a globalized
-                                    world.
-                                </p>
-                                <div class="w-100 mt-auto">
-                                    <img src="assets/media/leadership.jpg" alt="leadership" class="img-fluid rounded"
-                                        style="object-fit:cover;">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-chess-king fa-2x me-2 align-middle"></i>
+                                        Inspire Leadership</h3>
+                                    <p class="text mb-0">
+                                        Empowering individuals to lead with vision, empathy, and impact in a globalized
+                                        world.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
-                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
-                                style="background-color: #A8599E; min-height: 320px;">
-                                <div class="mb-3">
-                                    <i class="fa-solid fa-globe fa-2x"></i>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #E3B6D1; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/education.jpg" alt="education"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
                                 </div>
-                                <h3 class="h5 fw-bold mb-3">Global Education Connection</h3>
-                                <p class="text mb-3">
-                                    Bridging cultures and knowledge through international educational opportunities.
-                                </p>
-                                <div class="w-100 mt-auto">
-                                    <img src="assets/media/education.jpg" alt="education" class="img-fluid rounded"
-                                        style="object-fit:cover;">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3">
+                                        <i class="fa-solid fa-globe fa-2x me-2 align-middle"></i>
+                                        Global Education Connection
+                                    </h3>
+                                    <p class="text mb-0">
+                                        Bridging cultures and knowledge through international educational opportunities.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <!-- Card 3 -->
-                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
-                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
-                                style="background-color: #FCC100; min-height: 320px;">
-                                <div class="mb-3">
-                                    <i class="fa-solid fa-hand-holding-medical fa-2x"></i>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #FFE8A3; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/medical.jpg" alt="medical"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
                                 </div>
-                                <h3 class="h5 fw-bold mb-3">World Medical Alliance</h3>
-                                <p class="text mb-3">
-                                    Advancing health and wellness through global medical collaboration and training.
-                                </p>
-                                <div class="w-100 mt-5">
-                                    <img src="assets/media/medical.jpg" alt="medical" class="img-fluid rounded"
-                                        style="object-fit:cover;">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-hand-holding-medical fa-2x me-2 align-middle"></i> World
+                                        Medical Alliance</h3>
+                                    <p class="text mb-0">
+                                        Advancing health and wellness through global medical collaboration and training.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <!-- Card 4 -->
-                        <div class="col-12 col-sm-6 col-lg-3 d-flex">
-                            <div class="my-box p-4 text-white w-100 rounded-4 shadow text-center d-flex flex-column align-items-center h-100"
-                                style="background-color: #333333; min-height: 320px;">
-                                <div class="mb-3">
-                                    <i class="fa-solid fa-language fa-2x"></i>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #B0B0B0; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/english.jpg" alt="english"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
                                 </div>
-                                <h3 class="h5 fw-bold mb-3">Business English Immersion Trip</h3>
-                                <p class="text mb-3">
-                                    Master business English and cross-cultural skills through immersive real-world
-                                    experiences.
-                                </p>
-                                <div class="w-100 mt-auto">
-                                    <img src="assets/media/english.jpg" alt="english" class="img-fluid rounded"
-                                        style="object-fit:cover;">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-language fa-2x me-2 align-middle"></i> Business English
+                                        Immersion Trip</h3>
+                                    <p class="text mb-0">
+                                        Master business English and cross-cultural skills through immersive real-world
+                                        experiences.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- =======================
          Contact Us Section
     ======================== -->
-    <section class="contact-us-section py-5 bg-white">
+    <section class="contact-us-section py-5 bg-white" id="contact-section">
         <div class="container py-4">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-6">
-                    <div class="bg-white rounded-4 shadow p-4 p-md-5 text-center">
-                        <!-- Section title -->
-                        <h2 class="fw-bold mb-3 border-bottom border-1 border-grey p-2">Contact Us</h2>
-                        <h5 class="m-4">Let’s Shape the Future Together</h5>
-                        <p class="mb-4 p-4">
-                            We collaborate with businesses, governments, and institutions to create customized,
-                            high-impact programs. Let’s discuss how we can work together to build solutions that drive
-                            real change.
-                        </p>
-                        <!-- Contact details list -->
-                        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 400px;">
-                            <li class="mb-2">
-                                <span class="fs-5 me-2">📞</span>
-                                <strong>Phone:</strong> <a href="tel:+353896065175"
-                                    class="text-decoration-none text-dark">+353 89 606 5175</a>
-                            </li>
-                            <li class="mb-2">
-                                <span class="fs-5 me-2">📧</span>
-                                <strong>Email:</strong> <a href="mailto:your@email.com"
-                                    class="text-decoration-none text-dark">contact@oneflag.com</a>
-                            </li>
-                            <li class="mb-2">
-                                <span class="fs-5 me-2">💬</span>
-                                <strong>Schedule a Consultation:</strong>
-                                <a href="https://your-booking-link.com" class="text-decoration-none text-primary"
-                                    target="_blank">Book Now &rarr;</a>
-                            </li>
-                            <li class="mb-2">
-                                <span class="fs-5 me-2">🔗</span>
-                                <span class="fw-semibold">Take the First Step. Let’s Connect.</span>
-                            </li>
-                        </ul>
-                        <!-- Call to action button -->
-                        <div class="mb-3">
-                            <a href="mailto:your@email.com" class="btn btn-primary btn-lg mt-2">Send a Message</a>
+                <div class="col-12 col-lg-10">
+                    <div class="p-4 p-md-5 d-flex flex-column flex-lg-row align-items-stretch gap-4">
+                        <!-- Left: Illustration and heading -->
+                        <div
+                            class="w-100 w-lg-50 text-center mb-4 mb-lg-0 d-flex flex-column align-items-center justify-content-center justify-content-lg-start">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-envelope-open-text fa-5x"></i>
+                            </div>
+                            <h2 class="fw-bold mb-2">Let’s Connect</h2>
+                            <p class="lead mb-0">We’d love to hear from you! Reach out and let’s shape the future
+                                together.</p>
+                        </div>
+                        <!-- Right: Contact Info, stacked vertically -->
+                        <div class="w-100 w-lg-50 d-flex flex-column justify-content-center">
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-phone me-3 fs-4"></i>
+                                <a href="tel:+353896065175" class="text-decoration-none text-dark fw-semibold fs-5">+353
+                                    89 606 5175</a>
+                            </div>
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-envelope me-3 fs-4"></i>
+                                <a href="mailto:contact@oneflag.com"
+                                    class="text-decoration-none text-dark fw-semibold fs-5">contact@oneflag.com</a>
+                            </div>
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-calendar-check me-3 fs-4"></i>
+                                <a href="https://your-booking-link.com" target="_blank"
+                                    class="text-decoration-none text-dark fw-semibold fs-5">Book a Consultation</a>
+                            </div>
+                            <div class="mt-4 text-center text-lg-start">
+                                <a href="mailto:contact@oneflag.com"
+                                    class="btn btn-outline-dark btn-lg px-5 py-2 rounded shadow-sm">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Send a Message
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- =======================
          Footer
     ======================== -->
-    <footer class="bg-dark text-light pt-4 pb-3 mt-auto">
+    <footer class="bg-dark text-light pt-5 pb-3 mt-auto">
         <div class="container">
-            <div class="row text-center text-md-start">
+            <div class="row align-items-center text-center text-md-start">
                 <!-- Brand / Logo -->
-                <div class="col-12 col-md-4 mb-3">
-                    <a href="#" class="text-decoration-none text-light">
-                        <h5>One Flag</h5>
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                    <a href="index.html" class="text-decoration-none text-light d-flex align-items-center mb-2">
+                        <span class="fs-4 fw-bold">One Flag</span>
                     </a>
-                    <p class="small">United by purpose.</p>
+                    <p class="small mb-0">One Purpose.</p>
                 </div>
                 <!-- Navigation Links -->
-                <div class="col-12 col-md-4 mb-3">
-                    <h6>Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-light text-decoration-none d-block py-1"><i
+                                    class="fa fa-home me-2"></i>Home</a></li>
+                        <li><a href="#about-section" class="text-light text-decoration-none d-block py-1"><i
+                                    class="fa fa-users me-2"></i>About</a></li>
+                        <li><a href="#contact-section" class="text-light text-decoration-none d-block py-1"><i
+                                    class="fa fa-envelope me-2"></i>Contact</a></li>
                     </ul>
                 </div>
                 <!-- Legal / Social -->
-                <div class="col-12 col-md-4 mb-3">
-                    <h6>Connect</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Instagram</a></li>
+                <div class="col-12 col-md-4">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <ul class="list-unstyled mb-3">
+                        <li><a href="privacy.html" class="text-light text-decoration-none d-block py-1"><i
+                                    class="fa fa-shield-alt me-2"></i>Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-light text-decoration-none d-block py-1"><i
+                                    class="fa fa-file-contract me-2"></i>Terms of Service</a></li>
                     </ul>
+                    <div>
+                        <a href="https://instagram.com/yourprofile" target="_blank" class="text-light me-3 fs-4"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contact@oneflag.com" class="text-light fs-4" aria-label="Email"><i
+                                class="fa fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
-            <hr class="border-light">
+            <hr class="border-light my-4">
             <div class="text-center small">&copy; 2025 One Flag. All rights reserved.</div>
         </div>
     </footer>
@@ -507,7 +489,7 @@
     ======================== -->
     <script>
         // Word lists for animated text
-        const wordList1 = [" flag", " purpose"];
+        const wordList1 = [" Flag .", " Purpose ."];
         const wordList2 = ["Live", "Explore", "Transform"];
         const colorList2 = ["#A8599E", "#FCC100", "#1C35CE"];
 
@@ -557,39 +539,56 @@
             type();
         }
 
-        // Animate counters and start typing effects on DOM ready
-        document.addEventListener("DOMContentLoaded", function () {
-            // Animate number counters in statistics section
+        // Counter animation function
+        function animateCounters() {
             const counters = document.querySelectorAll('.counter');
             counters.forEach(counter => {
                 const prefix = counter.getAttribute('data-prefix') || '';
                 const suffix = counter.getAttribute('data-suffix') || '';
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const isDecimal = counter.getAttribute('data-decimal') === "true";
-                    let text = counter.innerText;
-                    if (prefix) text = text.replace(prefix, '');
-                    if (suffix) text = text.replace(suffix, '');
-                    let count = isDecimal ? parseFloat(text) : parseInt(text, 10);
-                    if (isNaN(count)) count = 0;
-                    const increment = isDecimal ? (target / 100) : Math.ceil(target / 100);
+                const target = +counter.getAttribute('data-target');
+                const isDecimal = counter.getAttribute('data-decimal') === "true";
+                let text = counter.innerText;
+                if (prefix) text = text.replace(prefix, '');
+                if (suffix) text = text.replace(suffix, '');
+                let count = isDecimal ? parseFloat(text) : parseInt(text, 10);
+                if (isNaN(count)) count = 0;
+                const increment = isDecimal ? (target / 100) : Math.ceil(target / 100);
 
+                function updateCount() {
                     if (count < target) {
-                        const next = isDecimal
-                            ? (count + increment > target ? target : (count + increment)).toFixed(1)
+                        count = isDecimal
+                            ? (count + increment > target ? target : (count + increment))
                             : Math.min(count + increment, target);
-                        counter.innerText = `${prefix}${next}${suffix}`;
+                        counter.innerText = `${prefix}${isDecimal ? count.toFixed(1) : count}${suffix}`;
                         setTimeout(updateCount, 20);
                     } else {
                         counter.innerText = `${prefix}${isDecimal ? target.toFixed(1) : target}${suffix}`;
                     }
-                };
+                }
                 updateCount();
             });
+        }
 
+        document.addEventListener("DOMContentLoaded", function () {
             // Start typing effects for animated words
             typeEffect(el1, wordList1, 0);
             typeEffect(el2, wordList2, 0, 150, colorList2);
+
+            // Intersection Observer for statistics section
+            let statsStarted = false;
+            const statsSection = document.getElementById('statistics-section');
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !statsStarted) {
+                            animateCounters();
+                            statsStarted = true;
+                            observer.unobserve(statsSection);
+                        }
+                    });
+                }, { threshold: 0.3 }); // 30% visible triggers the animation
+                observer.observe(statsSection);
+            }
         });
     </script>
 </body>
