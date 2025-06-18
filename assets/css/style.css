@@ -1,217 +1,203 @@
- body {
-     font-family: 'Playfair Display', serif;
- }
+/* ========== Base Typography ========== */
+body {
+    font-family: 'Playfair Display', serif;
+}
 
- .title {
-     font-family: 'Playfair Display', serif;
-     font-weight: 700;
- }
+.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
 
- .text {
-     font-family: 'Work Sans', sans-serif;
- }
+.text {
+    font-family: 'Work Sans', sans-serif;
+}
 
- .nav-item {
-     font-size: 20px;
-     padding: 0 15px;
-     display: flex;
-     align-items: center;
- }
+/* ========== Navbar Styles ========== */
+.nav-item {
+    font-size: 20px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
 
- .navbar-nav .nav-link {
-     position: relative;
-     font-size: 20px;
-     color: #000;
-     transition: color 0.3s ease;
-     padding-bottom: 4px;
- }
+.navbar-nav .nav-link {
+    position: relative;
+    font-size: 20px;
+    color: #000;
+    transition: color 0.3s ease;
+    padding-bottom: 4px;
+}
 
- .navbar-nav .nav-link::after {
-     content: "";
-     position: absolute;
-     left: 0;
-     bottom: 0;
-     height: 2px;
-     width: 0%;
-     background-color: #000;
-     transition: width 0.3s ease;
- }
+/* Underline animation on hover and active */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
 
- .navbar-nav .nav-link:hover::after {
-     width: 100%;
- }
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
 
- /* Keep underline on active link */
- .navbar-nav .nav-link.active::after {
-     width: 100%;
- }
+/* ========== Hero Section ========== */
+.hero-section {
+    padding: 60px 0;
+    background-color: white;
+    width: 100%;
+    height: 45xrem; /* Note: '45xrem' is likely a typo, should be '45rem' if intended */
+}
 
- .hero-section {
-     padding: 60px 0;
-     background-color: white;
-     width: 100%;
-     height: 45xrem;
- }
+.phrase h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
 
- .phrase h1 {
-     font-size: 5rem;
-     margin-bottom: 20px;
-     font-family: 'Playfair Display', serif;
- }
+.phrase,
+.hero-paragraph {
+    text-align: center;
+}
 
- .phrase,
- .hero-paragraph {
-     text-align: center;
- }
+.hero-text {
+    padding-right: 20rem;
+}
 
- .hero-text {
-     padding-right: 20rem;
-     ;
- }
+.static {
+    display: inline-block;
+}
 
- .static {
-     display: inline-block;
- }
+/* ========== Statistics Section ========== */
+.stat-box-text {
+    min-height: 120px; /* Ensures consistent card height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
- .stat-box-text {
-     min-height: 120px;
-     /* Adjust as needed for your content */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
- }
+/* Animated typing cursor */
+.dynamic::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+    margin-left: 2px;
+}
 
- .dynamic::after {
-     content: "|";
-     animation: blink 1s step-start infinite;
-     margin-left: 2px;
- }
+/* Animated word min-width for smooth transitions */
+#altWord2 {
+    display: inline-block;
+    min-width: 9ch; /* Responsive fix for animated word span */
+}
 
- #altWord2 {
-     display: inline-block;
-     min-width: 8ch;
-     /* 8 characters, adjust as needed */
- }
+/* ========== Responsive Logo ========== */
+.navbar-brand img {
+    max-height: 60px;
+    height: auto;
+    width: auto;
+}
 
- /* Responsive fix for animated word span */
- #altWord2 {
-     display: inline-block;
-     min-width: 9ch;
- }
-
- /* Responsive logo */
- .navbar-brand img {
-     max-height: 60px;
-     height: auto;
-     width: auto;
- }
-
- .mobile-break {
+/* Hide mobile break by default */
+.mobile-break {
     display: none;
 }
 
+/* Fixed size for card images */
 .card-img-fixed {
     width: 160px;
     height: 170px;
     object-fit: cover;
 }
 
- /* Responsive padding for hero */
- @media (max-width: 767.98px) {
-     .hero-section {
-         padding-top: 2rem !important;
-         padding-bottom: 2rem !important;
-     }
-
-     .hero-text {
-         text-align: center;
-         align-items: center !important;
-     }
-
-     .mobile-break {
+/* ========== Responsive Styles ========== */
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    .hero-text {
+        text-align: center;
+        align-items: center !important;
+    }
+    .mobile-break {
         display: block;
         width: 100%;
         height: 0;
     }
- }
+    .about-us-section img {
+        max-height: 120px !important;
+    }
+    .my-box {
+        min-height: 200px !important;
+        padding: 20px;
+    }
+}
 
- /* Responsive About Us logo */
- @media (max-width: 767.98px) {
-     .about-us-section img {
-         max-height: 120px !important;
-     }
- }
+@media (max-width: 991.98px) {
+    .my-box {
+        min-height: 260px !important;
+    }
+}
 
- /* Responsive feature cards */
- @media (max-width: 991.98px) {
-     .my-box {
-         min-height: 260px !important;
-     }
- }
+/* ========== Animations ========== */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
 
- @media (max-width: 767.98px) {
-     .my-box {
-         min-height: 200px !important;
-     }
- }
+/* ========== Hero Image Styles ========== */
+.hero-photo img {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    display: block;
+}
 
- @keyframes blink {
-     50% {
-         opacity: 0;
-     }
- }
+/* ========== Feature Card Styles ========== */
+.my-box {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
 
- .hero-photo img {
-     max-width: 100%;
-     height: auto;
-     width: 500px;
-     /* or any appropriate size */
-     display: block;
- }
+/* ========== Hero Image Mask ========== */
+.hero-image {
+    width: 100%;
+    height: auto;
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
 
- .my-box {
-     border-radius: 10px;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     padding: 30px;
-     border-radius: 10px;
-     transition: transform 0.3s ease, background-color 0.3s ease;
-     cursor: pointer;
- }
+/* ========== Additional Responsive Adjustments ========== */
+@media screen and (max-width: 768px) {
+    .hero-section .content {
+        width: 100%;
+        height: auto;
+    }
+    section .hero {
+        padding: 0;
+    }
+    .phrase {
+        font-size: 3rem;
+    }
+    .hero-paragraph {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .hero-photo img {
+        width: 100%;
+        height: auto;
+    }
+    .my-box {
+        padding: 20px;
+    }
+}
 
- .hero-image {
-     width: 100%;
-     height: auto;
-     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
- }
-
- @media screen and (max-width: 768px) {
-     .hero-section .content {
-         width: 100%;
-         height: auto;
-     }
-
-     section .hero {
-         padding: 0;
-     }
-
-     .phrase {
-         font-size: 3rem;
-     }
-
-     .hero-paragraph {
-         padding: 10px;
-         font-size: 1.2rem;
-     }
-
-     .hero-photo img {
-         width: 100%;
-         height: auto;
-     }
-
-     .my-box {
-         padding: 20px;
-     }
-
- }
+/* ========== End of Styles ========== */

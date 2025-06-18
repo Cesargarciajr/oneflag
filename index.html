@@ -11,11 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>One Flag</title>
     <link rel="icon" href="assets/media/favicon-16x16.png" type="image/x-icon">
-    <!-- Bootstrap CSS CDN -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -24,28 +23,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<button id="backToTop" class="btn btn-outline-dark rounded shadow" style="position:fixed; bottom:32px; right:32px; display:none; z-index:2000; width:48px; height:48px;">
-    <i class="fa fa-arrow-up"></i>
-</button>
-
-
-<script>
-    // Show/hide back to top button on scroll
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 300) {
-            backToTop.style.display = 'block';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    });
-    // Smooth scroll to top
-    backToTop.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
-
 <body>
+    <!-- Back to Top Button (hidden by default, shown on scroll) -->
+    <button id="backToTop" class="btn btn-outline-dark rounded shadow"
+        style="position:fixed; bottom:32px; right:32px; display:none; z-index:2000; width:48px; height:48px;">
+        <i class="fa fa-arrow-up"></i>
+    </button>
 
     <!-- =======================
          Navbar
@@ -171,8 +154,7 @@
                         <!-- Statistic 1 -->
                         <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
                             <div class="p-4 text-dark d-flex flex-column h-100">
-                                <h3 class="fs-1 title counter" data-target="39" data-prefix="+ " data-suffix=" %">0
-                                </h3>
+                                <h3 class="fs-1 title counter" data-target="39" data-prefix="+ " data-suffix=" %">0</h3>
                                 <p class="text mt-3 stat-box-text flex-grow-1">
                                     Companies with ethnically diverse leadership are 39% more likely to outperform
                                     competitors.
@@ -182,8 +164,7 @@
                         <!-- Statistic 2 -->
                         <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
                             <div class="p-4 text-dark d-flex flex-column h-100">
-                                <h3 class="fs-1 title counter" data-target="1.8" data-decimal="true" data-suffix=" x">0
-                                </h3>
+                                <h3 class="fs-1 title counter" data-target="1.8" data-decimal="true" data-suffix=" x">0</h3>
                                 <p class="text mt-3 stat-box-text flex-grow-1">
                                     Multicultural teams are 1.8 times more likely to be innovative and adaptable.
                                 </p>
@@ -192,8 +173,7 @@
                         <!-- Statistic 3 -->
                         <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
                             <div class="p-4 text-dark d-flex flex-column h-100">
-                                <h3 class="fs-1 title counter" data-target="30" data-prefix="+ " data-suffix=" %">0
-                                </h3>
+                                <h3 class="fs-1 title counter" data-target="30" data-prefix="+ " data-suffix=" %">0</h3>
                                 <p class="text mt-3 stat-box-text flex-grow-1">
                                     Culturally adaptive companies see 30% higher revenue growth than those that
                                     aren’t.
@@ -203,8 +183,7 @@
                         <!-- Statistic 4 -->
                         <div class="col-12 col-sm-6 col-lg-3 text-center h-100">
                             <div class="p-4 text-dark d-flex flex-column h-100">
-                                <h3 class="fs-1 title counter" data-target="73" data-prefix="+ " data-suffix=" %">0
-                                </h3>
+                                <h3 class="fs-1 title counter" data-target="73" data-prefix="+ " data-suffix=" %">0</h3>
                                 <p class="text mt-3 stat-box-text flex-grow-1">
                                     of executives cite cultural understanding as a top factor in the success of
                                     international business ventures.
@@ -215,14 +194,13 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- =======================
          About Us Section
     ======================== -->
     <h3 class="text-center m-4 fs-1" id="about-section">About us</h3>
-    <section class="about-us-section py-5 bg-white" >
+    <section class="about-us-section py-5 bg-white">
         <hr class="w-25 mx-auto mb-4 border-dark">
         <div class="container">
             <div class="row justify-content-center">
@@ -383,7 +361,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- =======================
@@ -433,6 +410,7 @@
             </div>
         </div>
     </section>
+
     <!-- =======================
          Footer
     ======================== -->
@@ -486,110 +464,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- =======================
-         Word Rotation Script
+         Custom Scripts
+    ======================== -->
+    <script src="assets/js/scrypt.js"></script>
+
+    <!-- =======================
+         Back to Top Button Script
     ======================== -->
     <script>
-        // Word lists for animated text
-        const wordList1 = [" Flag .", " Purpose ."];
-        const wordList2 = ["Live", "Explore", "Transform"];
-        const colorList2 = ["#A8599E", "#FCC100", "#1C35CE"];
-
-        // Get elements for animation
-        const el1 = document.getElementById("altWord1");
-        const el2 = document.getElementById("altWord2");
-
-        // Typing effect function for animated words
-        function typeEffect(element, words, index, delay = 150, colorList = null) {
-            let word = words[index];
-            let charIndex = 0;
-            let isDeleting = false;
-
-            // Set color if colorList is provided
-            if (colorList) {
-                element.style.color = colorList[index % colorList.length];
-            }
-
-            function type() {
-                const currentText = word.substring(0, charIndex);
-                element.textContent = currentText;
-
-                if (!isDeleting && charIndex < word.length) {
-                    charIndex++;
-                    setTimeout(type, delay);
-                } else if (isDeleting && charIndex > 0) {
-                    charIndex--;
-                    setTimeout(type, delay / 2);
-                } else {
-                    if (!isDeleting) {
-                        isDeleting = true;
-                        setTimeout(type, 1000);
-                    } else {
-                        isDeleting = false;
-                        index = (index + 1) % words.length;
-                        word = words[index];
-                        charIndex = 0;
-                        // Set color for the new word
-                        if (colorList) {
-                            element.style.color = colorList[index % colorList.length];
-                        }
-                        setTimeout(() => typeEffect(element, words, index, delay, colorList), 500);
-                    }
-                }
-            }
-
-            type();
-        }
-
-        // Counter animation function
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const prefix = counter.getAttribute('data-prefix') || '';
-                const suffix = counter.getAttribute('data-suffix') || '';
-                const target = +counter.getAttribute('data-target');
-                const isDecimal = counter.getAttribute('data-decimal') === "true";
-                let text = counter.innerText;
-                if (prefix) text = text.replace(prefix, '');
-                if (suffix) text = text.replace(suffix, '');
-                let count = isDecimal ? parseFloat(text) : parseInt(text, 10);
-                if (isNaN(count)) count = 0;
-                const increment = isDecimal ? (target / 100) : Math.ceil(target / 100);
-
-                function updateCount() {
-                    if (count < target) {
-                        count = isDecimal
-                            ? (count + increment > target ? target : (count + increment))
-                            : Math.min(count + increment, target);
-                        counter.innerText = `${prefix}${isDecimal ? count.toFixed(1) : count}${suffix}`;
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = `${prefix}${isDecimal ? target.toFixed(1) : target}${suffix}`;
-                    }
-                }
-                updateCount();
+        // Back to Top Button: Show/hide on scroll and smooth scroll to top
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function () {
+                backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
             });
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // Start typing effects for animated words
-            typeEffect(el1, wordList1, 0);
-            typeEffect(el2, wordList2, 0, 150, colorList2);
-
-            // Intersection Observer for statistics section
-            let statsStarted = false;
-            const statsSection = document.getElementById('statistics-section');
-            if (statsSection) {
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !statsStarted) {
-                            animateCounters();
-                            statsStarted = true;
-                            observer.unobserve(statsSection);
-                        }
-                    });
-                }, { threshold: 0.3 }); // 30% visible triggers the animation
-                observer.observe(statsSection);
-            }
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         });
     </script>
 </body>
