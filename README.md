@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # One Flag
 
 One Flag is a modern, responsive website designed to showcase the mission, vision, and services of the One Flag organization. The site emphasizes experiential learning, global leadership, health, and communication, using a clean design and interactive features.
@@ -58,3 +59,6 @@ assets/
 ## License
 
 This project is for demonstration and informational purposes. Please replace content and images as appropriate for your
+=======
+# oneflag
+>>>>>>> a3df763f282080b264431b0eded79943dd32c9ad

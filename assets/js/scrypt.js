@@ -1,8 +1,14 @@
 
 // Word lists for animated text
+<<<<<<< HEAD
 const wordList1 = ["Flag.", "Purpose."];
 const wordList2 = ["Live", "Explore", "Transform"];
 const colorList2 = ["#1CB5CE", "#FCC100", "#A8599E", "#000000"];
+=======
+const wordList1 = [" Flag .", " Purpose ."];
+const wordList2 = ["Live", "Explore", "Transform"];
+const colorList2 = ["#A8599E", "#FCC100", "#1C35CE"];
+>>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 
 // Get elements for animation
 const el1 = document.getElementById("altWord1");
