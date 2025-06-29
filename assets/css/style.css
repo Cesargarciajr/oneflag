@@ -113,8 +113,8 @@ body {
 
 /* Fixed size for card images */
 .card-img-fixed {
-    width: 160px;
-    height: 170px;
+    width: 800px;
+    height: 270px;
     object-fit: cover;
 }
 

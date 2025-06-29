@@ -146,25 +146,30 @@
                     <div class="row g-4 justify-content-center">
                         <!-- Card 1 with dropdown -->
                         <div class="col-12 col-md-6 d-flex">
-                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                            <div class="my-box p-0 text-dark w-100 rounded-4 shadow d-flex flex-column h-100"
                                 style="background-color: #1CB5CE; min-height: 200px; position: relative;">
-                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
-                                    style="min-width:100px;">
-                                    <img src="assets/media/leadership.jpg" alt="leadership"
-                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h3 class="h5 fw-bold mb-3">
+                                <!-- Fixed Header: Image and Title -->
+                                <div class="d-flex align-items-center p-4">
+                                    <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                        style="min-width:100px;">
+                                        <img src="assets/media/leadership.jpg" alt="leadership"
+                                            class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0">
                                             <i class="fa-solid fa-chess-king fa-2x me-2 align-middle"></i>
                                             Inspire Leadership
                                         </h3>
+                                        <br>
+                                        <p class="text mb-2">
+                                            Empowering individuals to lead with vision, empathy, and impact in a
+                                            globalized
+                                            world.
+                                        </p>
                                     </div>
-                                    <p class="text mb-0">
-                                        Empowering individuals to lead with vision, empathy, and impact in a globalized
-                                        world.
-                                    </p>
-                                    <br>
+                                </div>
+                                <!-- Expand Button and Collapsible Content -->
+                                <div class="p-4 flex-grow-1 d-flex flex-column">
                                     <div class="d-flex justify-content-end">
                                         <button class="btn p-0 text" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseLeadership" aria-expanded="false"
@@ -178,42 +183,42 @@
                                             <!-- More details about Inspire Leadership go here -->
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis commodi
                                             vel, nulla animi neque sed voluptas tempora placeat nisi praesentium a
-                                            veniam. Maxime libero vero possimus voluptate quam itaque. Lorem ipsum dolor
-                                            sit amet consectetur adipisicing elit. Illo, odio, minima possimus labore ab
-                                            officia minus doloribus eveniet fuga omnis nesciunt reprehenderit distinctio
-                                            commodi facere, aliquam accusamus harum architecto ad. Lorem ipsum dolor sit
-                                            amet consectetur adipisicing elit. Nihil, nulla impedit. Ullam eveniet
-                                            architecto itaque debitis! Recusandae incidunt debitis, quisquam dignissimos
-                                            accusamus, dolor atque reiciendis quia tenetur corrupti accusantium eius?
+                                            veniam. Maxime libero vero possimus voluptate quam itaque.
                                         </div>
                                         <br>
                                         <div>
-                                            <a href="#contact-section" class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
+                                            <a href="#contact-section"
+                                                class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 2 with dropdown -->
+                        <!-- Card 2 with dropdown (refactored) -->
                         <div class="col-12 col-md-6 d-flex">
-                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                            <div class="my-box p-0 text-dark w-100 rounded-4 shadow d-flex flex-column h-100"
                                 style="background-color: #FCC100; min-height: 200px; position: relative;">
-                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
-                                    style="min-width:100px;">
-                                    <img src="assets/media/education.jpg" alt="education"
-                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h3 class="h5 fw-bold mb-3">
+                                <!-- Fixed Header: Image and Title -->
+                                <div class="d-flex align-items-center p-4">
+                                    <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                        style="min-width:100px;">
+                                        <img src="assets/media/education.jpg" alt="education"
+                                            class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0">
                                             <i class="fa-solid fa-globe fa-2x me-2 align-middle"></i>
                                             Global Education Connection
                                         </h3>
+                                        <br>
+                                        <p class="text mb-2">
+                                            Bridging cultures and knowledge through international educational
+                                            opportunities.
+                                        </p>
                                     </div>
-                                    <p class="text mb-0">
-                                        Bridging cultures and knowledge through international educational opportunities.
-                                    </p>
-                                    <br>
+                                </div>
+                                <!-- Expand Button and Collapsible Content -->
+                                <div class="p-4 flex-grow-1 d-flex flex-column">
                                     <div class="d-flex justify-content-end">
                                         <button class="btn p-0 text" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseEducation" aria-expanded="false"
@@ -237,33 +242,38 @@
                                         </div>
                                         <br>
                                         <div>
-                                            <a href="#contact-section" class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
+                                            <a href="#contact-section"
+                                                class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 3 with dropdown -->
+                        <!-- Card 3 with dropdown (refactored) -->
                         <div class="col-12 col-md-6 d-flex">
-                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                            <div class="my-box p-0 text-dark w-100 rounded-4 shadow d-flex flex-column h-100"
                                 style="background-color: #A8599E; min-height: 200px; position: relative;">
-                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
-                                    style="min-width:100px;">
-                                    <img src="assets/media/medical.jpg" alt="medical"
-                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h3 class="h5 fw-bold mb-3">
+                                <!-- Fixed Header: Image and Title -->
+                                <div class="d-flex align-items-center p-4">
+                                    <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                        style="min-width:100px;">
+                                        <img src="assets/media/medical.jpg" alt="medical"
+                                            class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0">
                                             <i class="fa-solid fa-hand-holding-medical fa-2x me-2 align-middle"></i>
                                             World Medical Alliance
                                         </h3>
+                                        <br>
+                                        <p class="text mb-2">
+                                            Advancing health and wellness through global medical collaboration and
+                                            training.
+                                        </p>
                                     </div>
-                                    <p class="text mb-0">
-                                        Advancing health and wellness through global medical collaboration and training.
-                                    </p>
-                                    <br>
+                                </div>
+                                <!-- Expand Button and Collapsible Content -->
+                                <div class="p-4 flex-grow-1 d-flex flex-column">
                                     <div class="d-flex justify-content-end">
                                         <button class="btn p-0 text" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseMedical" aria-expanded="false"
@@ -287,34 +297,39 @@
                                         </div>
                                         <br>
                                         <div>
-                                            <a href="#contact-section" class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
+                                            <a href="#contact-section"
+                                                class="join-now-btn btn btn-lg btn-outline-dark">Join now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Card 4 with dropdown -->
+                        <!-- Card 4 with dropdown (refactored, dark theme) -->
                         <div class="col-12 col-md-6 d-flex">
-                            <div class="p-4 text-white w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                            <div class="p-0 text-white w-100 rounded-4 shadow d-flex flex-column h-100"
                                 style="background-color: #000000; min-height: 200px; position: relative;">
-                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
-                                    style="min-width:100px;">
-                                    <img src="assets/media/english.jpg" alt="english"
-                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h3 class="h5 fw-bold mb-3">
+                                <!-- Fixed Header: Image and Title -->
+                                <div class="d-flex align-items-center p-4">
+                                    <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                        style="min-width:100px;">
+                                        <img src="assets/media/english.jpg" alt="english"
+                                            class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-0">
                                             <i class="fa-solid fa-language fa-2x me-2 align-middle"></i>
                                             Business English Immersion Trip
                                         </h3>
+                                        <br>
+                                        <p class="text mb-2">
+                                            Master business English and cross-cultural skills through immersive
+                                            real-world
+                                            experiences.
+                                        </p>
                                     </div>
-                                    <p class="text mb-0">
-                                        Master business English and cross-cultural skills through immersive real-world
-                                        experiences.
-                                    </p>
-                                    <br>
+                                </div>
+                                <!-- Expand Button and Collapsible Content -->
+                                <div class="p-4 flex-grow-1 d-flex flex-column">
                                     <div class="d-flex justify-content-end">
                                         <button class="btn p-0 text text-white" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseEnglish" aria-expanded="false"
@@ -339,7 +354,8 @@
                                         <br>
                                         <div>
                                             <a href="#contact-section"
-                                                class="join-now-btn btn btn-lg btn-outline-light text-white text-dark">Join now</a>
+                                                class="join-now-btn btn btn-lg btn-outline-light text-white text-dark">Join
+                                                now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -348,6 +364,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
