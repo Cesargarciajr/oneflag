@@ -1,0 +1,498 @@
+<!--
+    Main HTML document for the One Flag website.
+    Uses Bootstrap 5, Google Fonts, Font Awesome, and custom CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>One Flag</title>
+    <link rel="icon" href="assets/media/favicon-16x16.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Back to Top Button (hidden by default, shown on scroll) -->
+    <button id="backToTop" class="btn btn-outline-dark rounded shadow">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- =======================
+         Navbar
+    ======================== -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white shadow-sm">
+        <div class="container-fluid">
+            <!-- Logo aligned left, smaller -->
+            <a class="navbar-brand me-auto" href="index.html">
+                <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo" class="img-fluid"
+                    style="max-height: 120px; width: auto; height: auto;">
+            </a>
+            <!-- Burger menu for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation links (collapsible on mobile) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-dark ms-lg-3 mt-2 mt-lg-0" href="#contact-section">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =======================
+         Hero Section
+    ======================== -->
+    <section class="hero-section p-0 m-0">
+        <div class="container my-2">
+            <div class="row align-items-center justify-content-center">
+                <!-- Left: Dynamic text and paragraph -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <div class="phrase mb-4 text-center text-md-start">
+                        <h1>
+                            <span class="static">One&nbsp;</span>
+                            <span class="mobile-break"></span>
+                            <span class="dynamic" id="altWord1">flag</span>
+                        </h1>
+                    </div>
+                    <p class="lead hero-paragraph text-center text-md-start pe-4 text">
+                        At One Flag, we are redefining how education, leadership, health, and
+                        communication shape the future. We believe in experiential learning — a hands-on,
+                        immersive approach that goes beyond traditional classrooms.
+                    </p>
+                </div>
+                <!-- Right: GIF image -->
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img src="assets/media/hero.gif" alt="Hero GIF" class="img-fluid"
+                        style="max-width: 100%; height: auto; max-height: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Dynamic Word Section
+    ======================== -->
+    <section class="pt-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="text-center pt-4">
+                        <!-- Animated word (Live, Explore, Transform) -->
+                        <h2 class="display-4 fw-bold mb-3">
+                            <span id="altWord2" class="fw-bold"></span>
+                        </h2>
+                        <p class="lead text-secondary text">
+                            Discover how you can unlock your potential with One Flag.
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature cards below the animated word -->
+                <div class="container my-5">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Card 1 -->
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #1CB5CE; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/leadership.jpg" alt="leadership"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-chess-king fa-2x me-2 align-middle"></i>
+                                        Inspire Leadership</h3>
+                                    <p class="text mb-0">
+                                        Empowering individuals to lead with vision, empathy, and impact in a globalized
+                                        world.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #FCC100; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/education.jpg" alt="education"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3">
+                                        <i class="fa-solid fa-globe fa-2x me-2 align-middle"></i>
+                                        Global Education Connection
+                                    </h3>
+                                    <p class="text mb-0">
+                                        Bridging cultures and knowledge through international educational opportunities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="my-box p-4 text-dark w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #A8599E; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/medical.jpg" alt="medical"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-hand-holding-medical fa-2x me-2 align-middle"></i> World
+                                        Medical Alliance</h3>
+                                    <p class="text mb-0">
+                                        Advancing health and wellness through global medical collaboration and training.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col-12 col-md-6 d-flex">
+                            <div class="p-4 text-white w-100 rounded-4 shadow d-flex flex-row align-items-center h-100"
+                                style="background-color: #000000; min-height: 200px;">
+                                <div class="me-4 d-flex flex-column align-items-center justify-content-center"
+                                    style="min-width:100px;">
+                                    <img src="assets/media/english.jpg" alt="english"
+                                        class="img-fluid rounded card-img-fixed" style="object-fit:cover;">
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-3"><i
+                                            class="fa-solid fa-language fa-2x me-2 align-middle"></i> Business English
+                                        Immersion Trip</h3>
+                                    <p class="text mb-0">
+                                        Master business English and cross-cultural skills through immersive real-world
+                                        experiences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Why Us Section
+    ======================== -->
+    <section class="why-us-section w-100 py-5 bg-white">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="mb-4">
+                        <h2 class="text-center fw-bold">Why Choose One Flag?</h2>
+                    </div>
+                    <div class="mb-4">
+                        <!-- List of reasons with icons -->
+                        <ul class="list-group list-group-flush mb-4 text">
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Impact-Driven Learning</strong> – Real-world experiences that drive change.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Global Network</strong> – Connecting professionals, businesses, and governments
+                                across borders.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Leadership Development</strong> – Cultivating the leaders of tomorrow through
+                                immersive training.
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-circle-check text-success me-2"></i>
+                                <strong>Sustainable Solutions</strong> – Addressing educational and societal challenges
+                                with long-term impact.
+                            </li>
+                        </ul>
+                        <!-- Call to action button -->
+                        <div class="text-center">
+                            <a href="#contact-section" class="btn btn-lg btn-outline-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         Statistics Section
+    ======================== -->
+    <section class="statistics-section py-5 bg-light" id="statistics-section">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <h2 class="fw-bold mb-4">The Impact of Diversity</h2>
+                    <p class="lead mb-5 text">
+                        Diversity is not just a metric; it's a catalyst for innovation and growth. At One Flag, we
+                        harness the power of diverse perspectives to drive success in every initiative.
+                    </p>
+                </div>
+                <!-- Four statistic cards in a row -->
+                <div class="container bg-light w-100">
+                    <div class="row g-4 justify-content-center align-items-stretch">
+                        <!-- Statistic 1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="39" data-prefix="+ " data-suffix=" %">0</h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Companies with ethnically diverse leadership are 39% more likely to outperform
+                                    competitors.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="1.8" data-decimal="true" data-suffix=" x">0
+                                </h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Multicultural teams are 1.8 times more likely to be innovative and adaptable.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 3 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100 border-end border-grey border-1">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="30" data-prefix="+ " data-suffix=" %">0</h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    Culturally adaptive companies see 30% higher revenue growth than those that
+                                    aren’t.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Statistic 4 -->
+                        <div class="col-12 col-sm-6 col-lg-3 text-center h-100">
+                            <div class="p-4 text-dark d-flex flex-column h-100">
+                                <h3 class="fs-1 title counter" data-target="73" data-prefix="+ " data-suffix=" %">0</h3>
+                                <p class="text mt-3 stat-box-text flex-grow-1">
+                                    of executives cite cultural understanding as a top factor in the success of
+                                    international business ventures.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================
+         About Us Section
+    ======================== -->
+    <h3 class="text-center m-4 fw-bold" id="about-section">About us</h3>
+    <section class="about-us-section py-5 bg-white">
+        <hr class="w-25 mx-auto mb-4 border-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 position-relative">
+                        <!-- Floating Logo -->
+                        <div class="position-absolute top-0 start-50 translate-middle-x"
+                            style="z-index:1050; margin-top: -60px;">
+                            <img src="assets/media/one-flag-nav-logo.webp" alt="One Flag Logo"
+                                class="img-fluid shadow rounded" style="width:150px; background:white;">
+                        </div>
+                        <!-- Content -->
+                        <div class="row mt-5 pt-4">
+                            <!-- Vision -->
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-regular fa-eye"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Vision</h4>
+                                    <br>
+                                    <p class="mb-0 small text">
+                                        To create a world where knowledge, opportunity, and growth are accessible to
+                                        all, fostering globally conscious leaders who drive positive change.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Mission -->
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-solid fa-flag"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Mission</h4>
+                                    <br>
+                                    <p class="mb-0 small text">
+                                        To transform lives and communities by bridging knowledge gaps through hands-on
+                                        learning in communication, leadership, health, and education.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Values -->
+                            <div class="col-12 col-md-4">
+                                <div class="h-100 p-4 rounded-4 text-center">
+                                    <div class="mb-3 fs-1"><i class="fa-regular fa-gem"></i></div>
+                                    <h4 class="fw-bold mb-2">Our Values</h4>
+                                    <br>
+                                    <ul class="list-unstyled mb-0 small text">
+                                        <li class="mb-2"><span class="me-1">💡</span>Empowerment</li>
+                                        <li class="mb-2"><span class="me-1">🌍</span>Inclusivity</li>
+                                        <li class="mb-2"><span class="me-1">🚀</span>Innovation</li>
+                                        <li class="mb-2"><span class="me-1">🔗</span>Collaboration</li>
+                                        <li><span class="me-1">🛠</span>Integrity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =======================
+         Contact Us Section
+    ======================== -->
+    <section class="contact-us-section py-5 bg-light" id="contact-section">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="p-4 p-md-5 d-flex flex-column flex-lg-row align-items-stretch gap-4">
+                        <!-- Left: Illustration and heading -->
+                        <div
+                            class="w-100 w-lg-50 text-center mb-4 mb-lg-0 d-flex flex-column align-items-center justify-content-center justify-content-lg-start">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-envelope-open-text fa-5x"></i>
+                            </div>
+                            <h2 class="fw-bold mb-2">Let’s Connect</h2>
+                            <p class="lead mb-0 text">We’d love to hear from you! Reach out and let’s shape the future
+                                together.</p>
+                        </div>
+                        <!-- Right: Contact Info, stacked vertically -->
+                        <div class="w-100 w-lg-50 d-flex flex-column justify-content-center text">
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-phone me-3 fs-4"></i>
+                                <a href="tel:+353896065175" class="text-decoration-none text-dark fw-semibold fs-5">+353
+                                    89 606 5175</a>
+                            </div>
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-envelope me-3 fs-4"></i>
+                                <a href="mailto:contact@oneflag.com"
+                                    class="text-decoration-none text-dark fw-semibold fs-5">contact@oneflag.com</a>
+                            </div>
+                            <div class="mb-3 d-flex align-items-center">
+                                <i class="fa-solid fa-calendar-check me-3 fs-4"></i>
+                                <a href="https://your-booking-link.com" target="_blank"
+                                    class="text-decoration-none text-dark fw-semibold fs-5">Book a Consultation</a>
+                            </div>
+                            <div class="mt-4 text-center text-lg-start">
+                                <a href="mailto:contact@oneflag.com"
+                                    class="btn btn-outline-dark btn-lg px-5 py-2 rounded shadow-sm">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Send a Message
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+         Footer
+    ======================== -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Brand / Logo -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                    <a href="index.html" class="text-decoration-none text-light d-flex align-items-center mb-2">
+                        <span class="fs-4 fw-bold">One Flag</span>
+                    </a>
+                    <p class="small mb-0 text">One Purpose.</p>
+                </div>
+                <!-- Navigation Links -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-light text-decoration-none d-block py-1 text"><i
+                                    class="fa fa-home me-2"></i>Home</a></li>
+                        <li><a href="#about-section" class="text-light text-decoration-none d-block py-1 text"><i
+                                    class="fa fa-users me-2"></i>About</a></li>
+                        <li><a href="#contact-section" class="text-light text-decoration-none d-block py-1 text"><i
+                                    class="fa fa-envelope me-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Legal / Social -->
+                <div class="col-12 col-md-4">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <ul class="list-unstyled mb-3">
+                        <li><a href="privacy.html" class="text-light text-decoration-none d-block py-1 text"><i
+                                    class="fa fa-shield-alt me-2"></i>Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-light text-decoration-none d-block py-1 text"><i
+                                    class="fa fa-file-contract me-2"></i>Terms of Service</a></li>
+                    </ul>
+                    <div>
+                        <a href="https://instagram.com/yourprofile" target="_blank" class="text-light me-3 fs-4"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contact@oneflag.com" class="text-light fs-4" aria-label="Email"><i
+                                class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-light my-4">
+            <div class="text-center small text">&copy; 2025 One Flag. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- =======================
+         Bootstrap JS Bundle
+    ======================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =======================
+         Custom Scripts
+    ======================== -->
+    <script src="assets/js/scrypt.js"></script>
+
+    <!-- =======================
+         Back to Top Button Script
+    ======================== -->
+    <script>
+        // Back to Top Button: Show/hide on scroll and smooth scroll to top
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function () {
+                backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+            });
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
