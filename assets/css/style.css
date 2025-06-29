@@ -9,12 +9,8 @@ body {
 }
 
 .text {
-<<<<<<< HEAD
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
-=======
-    font-family: 'Work Sans', sans-serif;
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 }
 
 /* ========== Navbar Styles ========== */
@@ -55,12 +51,8 @@ body {
     padding: 60px 0;
     background-color: white;
     width: 100%;
-<<<<<<< HEAD
     height: 45xrem;
     /* Note: '45xrem' is likely a typo, should be '45rem' if intended */
-=======
-    height: 45xrem; /* Note: '45xrem' is likely a typo, should be '45rem' if intended */
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 }
 
 .phrase h1 {
@@ -76,10 +68,7 @@ body {
 
 .hero-text {
     padding-right: 20rem;
-<<<<<<< HEAD
     font-family: 'Poppins', sans-serif;
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 }
 
 .static {
@@ -88,12 +77,8 @@ body {
 
 /* ========== Statistics Section ========== */
 .stat-box-text {
-<<<<<<< HEAD
     min-height: 120px;
     /* Ensures consistent card height */
-=======
-    min-height: 120px; /* Ensures consistent card height */
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,12 +95,8 @@ body {
 /* Animated word min-width for smooth transitions */
 #altWord2 {
     display: inline-block;
-<<<<<<< HEAD
     min-width: 9ch;
     /* Responsive fix for animated word span */
-=======
-    min-width: 9ch; /* Responsive fix for animated word span */
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 }
 
 /* ========== Responsive Logo ========== */
@@ -137,7 +118,6 @@ body {
     object-fit: cover;
 }
 
-<<<<<<< HEAD
 #backToTop {
 
     position: fixed;
@@ -155,42 +135,26 @@ h2, h3 {
     font-size: 3.0rem;
 }
 
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 /* ========== Responsive Styles ========== */
 @media (max-width: 767.98px) {
     .hero-section {
         padding-top: 2rem !important;
         padding-bottom: 2rem !important;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .hero-text {
         text-align: center;
         align-items: center !important;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .mobile-break {
         display: block;
         width: 100%;
         height: 0;
     }
-<<<<<<< HEAD
 
     .about-us-section img {
         max-height: 120px !important;
     }
 
-=======
-    .about-us-section img {
-        max-height: 120px !important;
-    }
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .my-box {
         min-height: 200px !important;
         padding: 20px;
@@ -241,7 +205,6 @@ h2, h3 {
         width: 100%;
         height: auto;
     }
-<<<<<<< HEAD
 
     section .hero {
         padding: 0;
@@ -251,36 +214,19 @@ h2, h3 {
         font-size: 3rem;
     }
 
-=======
-    section .hero {
-        padding: 0;
-    }
-    .phrase {
-        font-size: 3rem;
-    }
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .hero-paragraph {
         padding: 10px;
         font-size: 1.2rem;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .hero-photo img {
         width: 100%;
         height: auto;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
     .my-box {
         padding: 20px;
     }
 }
 
-<<<<<<< HEAD
 /* ========== Floating WhatsApp Button ========== */
 .whatsapp-float {
     position: fixed;
@@ -308,6 +254,4 @@ h2, h3 {
     text-decoration: none;
 }
 
-=======
->>>>>>> a3df763f282080b264431b0eded79943dd32c9ad
 /* ========== End of Styles ========== */
